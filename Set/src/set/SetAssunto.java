@@ -58,8 +58,22 @@ public class SetAssunto {
         
         
         //CONJUNTO HOMOGÊNEO
-        Set<String> listaAprovados = new HashSet<>();
+        //Set<String> listaAprovados = new HashSet<>();     // lista não ordenada
+        SortedSet<String> listaAprovados = new TreeSet<>(); //lista ordenada
         listaAprovados.add("Ana");
+        listaAprovados.add("Carlos");
+        listaAprovados.add("Luca");
+        listaAprovados.add("Pedro");
+        
+        for (String candidato: listaAprovados){
+            System.out.println(candidato);
+        }
+        
+        Set<Integer>numeros = new HashSet<>();
+        numeros.add(1);
+        numeros.add(2);
+        //Errado abaixo
+        numeros.add("Luca");
         
         
     }
